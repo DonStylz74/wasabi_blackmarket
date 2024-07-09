@@ -9,7 +9,7 @@ Config.checkForUpdates = true -- Check for Updates?
 Config.PayAccount = 'black_money' -- Account you want the black market to use('black_money', 'money', 'bank')
 Config.OldESX = false -- Set to true for older ESX versions lacking xPlayer.canCarryItem function
 Config.qtarget = true -- Use target? If set to false will use 3D text
-Config.MarketPed = `a_m_m_og_boss_01` -- Jenkins hash of ped here
+Config.MarketPed = `CS_JohnnyKlebitz` -- Jenkins hash of ped here
 Config.WebhookLink = '' -- Webhook here / leave as is if you don't want to use
 
 Config.Locations = { --[[ Locations black market ped will spawn at random per restart.
@@ -19,7 +19,7 @@ Config.Locations = { --[[ Locations black market ped will spawn at random per re
 		heading = 153.14
 	},
 
-	[2] = {
+	--[[  [2] = {
 		coords = vector3(289.8, -1204.34, 29.29),
 		heading = 275.48
 	},
@@ -32,7 +32,7 @@ Config.Locations = { --[[ Locations black market ped will spawn at random per re
 	[4] = {
 		coords = vector3(57.89, -1733.11, 29.31),
 		heading = 59.03
-	},
+	},  ]]--
 }
 
 Config.randomLocation = Config.Locations[math.random(1,#Config.Locations)]
@@ -43,46 +43,21 @@ Config.Items = { -- If weapons are not as items (Older inventories) then set typ
 --		item = 'WEAPON_COMPACTRIFLE',
 --		price = 42500,
 --		type = 'weapon'
---	},
+--		},
 	{
-		label = 'Compact Rifle',
-		item = 'WEAPON_COMPACTRIFLE',
-		price = 42500,
+		label = 'Bandage',
+		item = 'bandage',
+		price = 250
+	},
+	{
+		label = 'Ammo Case: 9x9mm (x120)',
+		item = 'box_ammo_9',
+		price = 400,
 	},
 	{
 		label = 'Combat Pistol',
 		item = 'WEAPON_COMBATPISTOL',
 		price = 19250,
-	},
-	{
-		label = 'Ceramic Pistol',
-		item = 'WEAPON_CERAMICPISTOL',
-		price = 41000,
-	},
-	{
-		label = 'AP Pistol',
-		item = 'WEAPON_APPISTOL',
-		price = 112000,
-	},
-	{
-		label = 'Gusenberg',
-		item = 'WEAPON_GUSENBERG',
-		price = 322111
-	},
-	{
-		label = 'Carbine Rifle',
-		item = 'WEAPON_CARBINERIFLE',
-		price = 322111
-	},
-	{
-		label = 'Carbine Rifle',
-		item = 'WEAPON_CARBINERIFLE',
-		price = 455810
-	},
-	{
-		label = 'Ballup Rifle',
-		item = 'WEAPON_BULLPUPRIFLE',
-		price = 455654
 	},
 	{
 		label = 'Micro SMG',
@@ -100,8 +75,49 @@ Config.Items = { -- If weapons are not as items (Older inventories) then set typ
 		price = 85
 	},
 	{
-		label = 'Grenade',
-		item = 'WEAPON_GRENADE',
-		price = 1250
+		label = 'Drug Dealer Phone',
+		item = 'r_trapphone',
+		price = 7500
 	},
+	{
+		label = 'Weed Processing Table',
+		item = 'weed_processing_table',
+		price = 50000
+	},
+	{
+		label = 'Cocaine Processing Table',
+		item = 'cocaine_processing_table',
+		price = 75000
+	},
+
+	{
+		label = 'Vehicle Lockpick',
+		item = 'lockpick',
+		price = 150
+	},
+
+	{
+		label = 'Wire Cutters',
+		item = 'hotwire',
+		price = 200
+	},
+
+	{
+		label = 'Fake Vehicle Plates',
+		item = 'fakeplate',
+		price = 10000
+	},
+
+	{
+		label = 'Door Lockpick',
+		item = 'lockpick2',
+		price = 450
+	},
+
+	{
+		label = 'Vehicle Repairkit',
+		item = 'repairkit',
+		price = 2000
+	},
+
 }
